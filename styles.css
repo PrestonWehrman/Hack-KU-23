@@ -24,10 +24,10 @@ h2 {
 
 /*division on top*/
 .topDiv {
-  border: 5px outset wheat;
-  background-color: lightblue;
+  border: 1px outset pink;
+  background-color: whitesmoke;
   display: left;
-  text-align: center;
+  padding: 5px;
 }
 
 /*calendar styles*/
