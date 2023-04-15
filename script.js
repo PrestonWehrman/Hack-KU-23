@@ -30,11 +30,6 @@ document
         btn[index].onclick = function () {
           modal.style.display = "block";
           modal_p_title.textContent = btn[index].getAttribute('data-match');
-          modal_table.rows[0].cells[0].innerHTML = btn[index].getAttribute('data-p1');
-          modal_table.rows[0].cells[1].innerHTML = btn[index].getAttribute('data-p1wins');
-          modal_table.rows[0].cells[4].innerHTML = btn[index].getAttribute('data-p2');
-          modal_table.rows[0].cells[3].innerHTML = btn[index].getAttribute('data-p2wins');
-          modal_video.src = btn[index].getAttribute('data-video');
         };
       })(i)
     }
