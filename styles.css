@@ -15,8 +15,7 @@ h1 {
 }
 
 h2 {
-    text-align:center;
-    text-indent: 800px;
+    text-align:left;
   color: white;
 }
 
@@ -68,3 +67,17 @@ h2 {
   background-color: #3e8e41;
 }
 
+
+/*calendar styles*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
