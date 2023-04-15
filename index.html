@@ -6,6 +6,8 @@
 <head>
   <title>Room Reservation</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Outlook.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -46,12 +48,3 @@
 </body>
 
 </html>
-
-<script>
-
-  var now = new Date();
-  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-  var nt = now.toISOString().slice(0, 16);
-  console.log(nt);
-  document.getElementById("time").setAttribute("value", nt);
-</script>
