@@ -1,101 +1,50 @@
 title {
-    display: none;
-  }
+  display: none;
+}
 
-  /*body things*/
 body {
-  background-color: lightblue;
+  background-color: lightcyan;
   color: black;
 }
+
 .inv {
   display: none;
 }
+
 h1 {
-    text-align:center;
-    text-decoration: overline underline;
+  text-align: center;
+  text-decoration: underline;
   color: black;
 }
 
 h2 {
-    text-align:left;
+  text-align: left;
   color: black;
 }
 
-/*Dropdown Menus*/
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: outset;
-    border-radius: 8px;
-    cursor: pointer;
-    min-width: 200px;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
-  
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    padding: 30px 0;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 150px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: darkblue;
-}
-
 /*division on top*/
-.topDiv{
+.topDiv {
   border: 5px outset wheat;
-  background-color: lightblue;    
+  background-color: lightblue;
   display: left;
   text-align: center;
 }
 
-
 /*calendar styles*/
 input[type="date"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
 }
 
-.calendar{
+.calendar {
   position: relative;
   display: inline-block;
-
 }
