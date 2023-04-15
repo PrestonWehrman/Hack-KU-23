@@ -5,18 +5,18 @@ title {
   /*body things*/
 body {
   background-color: lightblue;
-  color: blue;
+  color: black;
 }
 
 h1 {
     text-align:center;
     text-decoration: overline underline;
-  color: white;
+  color: black;
 }
 
 h2 {
     text-align:left;
-  color: white;
+  color: black;
 }
 
 /*Dropdown Menus*/
