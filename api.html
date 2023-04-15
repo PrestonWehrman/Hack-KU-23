@@ -1,0 +1,123 @@
+//https://www.youtube.com/watch?v=4lVSLsE7z8U
+
+
+<!DOCTYPE.html>
+<html lang = “en”>
+
+<head>
+<meta charset = “utf-8”>
+<meta name = “viewport” content = “width=device-width, initial-scale=1”>
+
+<script async defer src = “https://apis.google.com/js/api.js” onload = “this.onload=function(){};” onreadystatechange = if onreadystatechange-"if (this.readystate ===*complete") this.onload()”></script>
+
+<script src=“OUR GITHUB”<</script>
+<script Language="JavaScript" type="text/javascript" src-“OUR GITHUB”></script>
+
+<script> 
+$(function () {
+	$(“#statedate”).datepicker( {dateFormat: ‘yy-mm-dd’ });
+	$(“startdate”).datepicker({ dateFormat: ‘yy-mm-dd-});
+});
+</script>
+
+<script type= “text/javascript”>
+
+function makeNewEvent() {
+	var form = collectFormData();
+	console.log(form);
+	var event = formatEvent(form.fname, form.lname, form.email, form.stateDate, form.endDate);
+console.log(event);
+}
+
+Function collectFormData(){
+Return {
+	’fname’ : document.getElementByID(‘firstName’).value,
+	’lname’ : document.getElementByID(‘lastName’).value,
+	’kuemail’ : document.getElementByID(‘email’).value,
+	‘startTime’ : document.getElementByID(‘startTime’).value,
+	‘endTime’ : document.getElementByID(‘endTime’).value,
+};
+}
+
+</script>
+
+<script type = “text/javascript”>
+
+var calendarID = ‘Whatever our ID is’;
+var serviceAccountID = ‘Our Service Account”;
+
+// AUTHENTICATION SECTION
+// This entire section deals with Gooale Service Account authentication to obtain a token
+// Tokens expire every hour and will be regenerated
+// Most of this was found with help online, and then used KJUR api
+
+// load the corresponding file that contains the key.
+loadKey = new XMLHttpRequest();
+var hackKUfile;
+
+loadKey.open(‘GET’, ‘OUR KEY’, false);
+loadKey.onreadystatechange = function (){
+	hackKUfile = JSON.parse(loadKey.response);
+}
+loadKey.send(null);
+
+var pHeader = {‘alg’: ‘RS256’, ‘typ’: ‘JWT’ }
+var sHeader = JSON.stringify(pHeader);
+
+var pClaim = {};
+pClaim.aud = “https://www.gogleapis.com/oauth2/v4/token”;
+pClaim.scope = “https://www.gogleapis.com/auth/calendar”;
+pClaim.iss = serviceAccountID;
+pClaim.exp =KJUR.jws.IntDate.get(“now + 1hour”);
+pClaim.iat = KJUR.jws.IntDate.get(“now”);
+
+var sClaim = JSON.stringify(claim);
+
+var key = hackKUfile.private_key;
+
+var sJWS = KJUR.jws.JWS.sign(null, sHeader, sClaim, key);
+
+var XHR = new XLMHttpRequest();
+var urlEncodedData = “”;
+var urlEncodedDataPairs = [];
+
+urlEncodedDataPairs.push(encodedURIComponent(“grant_type”) + ‘=‘ + encodedURIComponent(“urn:ietf:params:oauth:grant-type:jwt-bearer”));
+urlEncodedDataPairs.push(encodeURIComponent(“assertion”) + ‘=‘ + encodedURIComponent(sJWS));
+urlEncodedData = urlEncodedDataPairs.join(‘&’).replace(%20/g, ‘+’);
+
+var token = ‘’;
+
+XHR.addEventListener(‘load’, function (event) {
+	var response = JSON.parse(XHR.responseText);
+	token = response[“access_token”];
+});
+
+XHR.addEventListener(‘error’, function (event) { console.log(‘Oops! Something went wrong.’); });
+
+XHR.open(‘Post’, ‘https://www.googleapis.com/oauth2/v4/token', false);
+XHR.setRequestHeader(‘Content-Type, ‘application/x-www-form-urlencoded’);
+XHR.send(urlEncodedData);
+
+function formEvent(fname, name, email, start, end){
+return{
+	“end”: {
+		“date”: end
+},
+	“start”: {
+	“date”: start
+}
+	“summary”: “RESERVED”,
+	“creator”: {
+	“displayName”: fname + “ “ + lname,
+	“email” : email,
+}
+};
+
+function addEvent(event) {
+xhr = new XMLHHttpRequest();
+xhr.open(‘POST, ‘https://www.googleapis.com/calendar/v3/calendars/'' + calendarID + ‘/events?’ + ‘access_token=‘ + token, false);
+xhr.setRequestHeader(“Content-Type”, “application/json;charset=UTF-8”);
+xhr.onreadystatechange = function(){
+console.log(‘added’);
+}
+Xhr.send(JSON.stringify(event));
