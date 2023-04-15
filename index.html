@@ -2,45 +2,55 @@
 
 
 <html>
+
 <head>
   <title>Room Reservation</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  
 
-<h1>Room Reservation a.k.a. Boi</h1>
 
-<!--Building and Floor Dropdown menu-->
-<div class="dropdown" style="right: -800px;">
-  <button class="dropbtn">Building</button>
-  <div class="dropdown-content" style="left: 0;">
-  <a href="#">LEEP2</a>
-  <a href="#">Eaton</a>
-  <a href="#">Learned</a>
+  <h1>Room Reservation a.k.a. Boi</h1>
+
+  <!--Building and Floor Dropdown menu-->
+  <div class="dropdown" style="right: -800px;">
+    <button class="dropbtn">Building</button>
+    <div class="dropdown-content" style="left: 0;">
+      <a href="#">LEEP2</a>
+      <a href="#">Eaton</a>
+      <a href="#">Learned</a>
+    </div>
   </div>
-</div>
 
-<div class="dropdown" style="right: -900px;">
-  <button class="dropbtn">Floor</button>
-  <div class="dropdown-content">
-  <a href="#">1</a>
-  <a href="#">2</a>
-  <a href="#">3</a>
+  <div class="dropdown" style="right: -900px;">
+    <button class="dropbtn">Floor</button>
+    <div class="dropdown-content">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+    </div>
   </div>
-</div>
 
 
 
 
   <h2>Please select date and time:
+
     <p>
-      <input type="datetime-local" id="date">
+      <input type="datetime-local" id="time" name="meeting-time" value="">
     </p>
-    
+
   </h2>
 
 </body>
-</html>
 
-<!--use the form command at some point?-->
+</html>
+<script>
+
+  var now = new Date();
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+  var nt = now.toISOString().slice(0, 16);
+  console.log(nt);
+  document.getElementById("time").setAttribute("value", nt);
+</script>
