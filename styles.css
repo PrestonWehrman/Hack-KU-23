@@ -48,3 +48,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: relative;
   display: inline-block;
 }
+
+.floormap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  transform-origin: bottom-right;
+  transform: scale(0.5);
+}
+
