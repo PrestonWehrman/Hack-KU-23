@@ -1,52 +1,26 @@
 <!DOCTYPE html>
-
-
 <html>
 
 <head>
   <title>Room Reservation</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Outlook.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <h1>KU Engineering Study Room Reservation Tool</h1>
 
+  <label for="time">Time:</label>
+  <input type="datetime-local" id="time" name="time" value="">
 
-  <h1>Room Reservation a.k.a. Boi</h1>
+  <label for="floor">LEEP 2 Floor:</label>
 
-  <!--Building and Floor Dropdown menu-->
-  <div class="topDiv">
-  <div class="dropdown" style="right: -350px;">
-    <button class="dropbtn">Building</button>
-    <div class="dropdown-content" >
-      <a href="#">LEEP2</a>
-      <a href="#">Eaton</a>
-      <a href="#">Learned</a>
-    </div>
-  </div>
+  <select name="floor" id="floor">
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
 
-  <div class="dropdown" style="right: -450px;">
-    <button class="dropbtn">Floor</button>
-    <div class="dropdown-content">
-      <a href="#">G</a>
-      <a href="#">1</a>
-      <a href="#">2</a>
-    </div>
-  </div>
-
-  <div class="calendar" style="right: 600px;">
-    <h3>
-      Please select date and time:
-    </h3>
-    <input type="datetime-local" id="time" name="meeting-time" value="">
-  </div>
-  </div>
-
-
-
-  <h2>
-    Please make your room selection: 
-  </h2>
+  <div id="1" class="vis">Content 1</div>
+  <div id="2" class="inv">Content 2</div>
 
   <div class="floormap">
     <img src="/Floor Plan 2 Images/second floor layout.png">
@@ -54,4 +28,5 @@
 
 </body>
 <script src="/script.js"></script>
+
 </html>
