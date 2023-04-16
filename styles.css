@@ -59,20 +59,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .floormap1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 505px;
-  transform-origin: center;
   transform: scale(0.7);
 }
 
 .floormap2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  transform-origin: center;
+  float:right;
   transform: scale(0.7);
 }
 
