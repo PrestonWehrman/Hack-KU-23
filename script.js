@@ -47,41 +47,41 @@ document.getElementById("end-date").setAttribute("value", nt.slice(0, 10));
 
     if(r1320){
       var img = document.getElementById("1320");
-      img.src = "/FloorPlans/1320r.png";
+      img.src = "./FloorPlans/1320r.png";
     }
     if(r1322){
       var img = document.getElementById("1322");
-      img.src = "/FloorPlans/1322r.png";
+      img.src = "./FloorPlans/1322r.png";
     }
     if(r1324){
       var img = document.getElementById("1324");
-      img.src = "/FloorPlans/1324r.png";
+      img.src = "./FloorPlans/1324r.png";
     }
     if(r1326){
       var img = document.getElementById("1326");
-      img.src = "/FloorPlans/1326r.png";
+      img.src = "./FloorPlans/1326r.png";
     }
     if(r1328){
       var img = document.getElementById("1328");
-      img.src = "/FloorPlans/1328r.png";
+      img.src = "./FloorPlans/1328r.png";
     }
     if(r2320){
       var img = document.getElementById("2320");
-      img.src = "/FloorPlans/2320r.png";
+      img.src = "./FloorPlans/2320r.png";
     }
     if(r2322){
       var img = document.getElementById("2322");
-      img.src = "/FloorPlans/2322r.png";
+      img.src = "./FloorPlans/2322r.png";
     }
     if(r2324){
       var img = document.getElementById("2324");
-      img.src = "/FloorPlans/2324r.png";
+      img.src = "./FloorPlans/2324r.png";
     }
     if(r2326){
       var img = document.getElementById("2326");
-      img.src = "/FloorPlans/2326r.png";
+      img.src = "./FloorPlans/2326r.png";
     }
     if(r2328){
       var img = document.getElementById("2328");
-      img.src = "/FloorPlans/2328r.png";
+      img.src = "./FloorPlans/2328r.png";
     }
