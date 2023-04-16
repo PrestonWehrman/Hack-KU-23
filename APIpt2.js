@@ -20,16 +20,16 @@ const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
 
 // Create a new event start date instance for temp uses in our calendar.
 const eventStartTime = new Date()
-eventStartTime.setDate(eventStartTime.getDay())
+eventStartTime.setDate(eventStartTime.getDay()+ 2) //start day
 
 // Create a new event end date instance for temp uses in our calendar.
 const eventEndTime = new Date()
-eventEndTime.setDate(eventEndTime.getDay())
-eventEndTime.setMinutes(eventEndTime.getMinutes())
+eventEndTime.setDate(eventEndTime.getDay()+ 1) //end day
+eventEndTime.setMinutes(eventEndTime.getMinutes()+ 1) //this is the duration of the meeting
 
 // Create a dummy event for temp uses in our calendar
 const event = {
-  summary: `Meeting with Cade`,
+  summary: `Meeting with Mr. Jansen`,
   location: `Room LEEP2 1320`,
   description: `Gotta do some stuffs.`,
   colorId: 1,
@@ -75,5 +75,5 @@ calendar.freebusy.query(
  
     // If event array is not empty log that we are busy.
     return console.log(`Sorry this room is busy...`)
-  }
+ }
 )
