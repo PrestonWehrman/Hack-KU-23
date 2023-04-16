@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <title>Room Reservation</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Room Reservation</title>s
+  <link rel="stylesheet" href="./styles.css">
+  <script src="/APIpt2.js"></script>
 </head>
 
 <body>
@@ -11,6 +12,11 @@
   <div class="topDiv">
     <label for="time">Time:</label>
     <input type="datetime-local" id="time" name="time" value="">
+    <script async src="https://apis.google.com/js/api.js"></script>
+  
+  <!-- Include any other required libraries or dependencies here -->
+  <!-- Uncomment the following script tag if you need to use the Google client library for authorization -->
+  <script async src="https://apis.google.com/js/client.js"></script>
   </div>
   <br>
 
@@ -76,10 +82,10 @@
       <span class="close">&times; Close</span>
       <div class="modal-content">
         <p class="modal-p-title" id="modal-p-title">LEEP2 <span id="room-num">###</span></p>
-        <form id="myForm" onsubmit="newEvent()">
+        <form id="myForm" action="/submit" method="post">
           <label>Start Time</label>
-          <input id="start-date" type="date" required/>
-          <select id="start-time" name="dtime" id="etime">
+          <input id="start-date" name="start-date" type="date" required/>
+          <select id="start-time" name="start-time" id="etime">
             <option value="12:00am">12:00am</option>
             <option value="12:30am">12:30am</option>
             <option value="1:00am">1:00am</option>
@@ -130,8 +136,8 @@
             <option value="11:30pm">11:30pm</option>
           </select>
           <label>End Time</label>
-          <input id="end-date" type="date" value="" required/>
-          <select id="end-time" name="dtime" id="dtime">
+          <input id="end-date" name="end-date" type="date" value="" required/>
+          <select id="end-time" name="end-time" id="dtime">
             <option value="12:00am">12:00am</option>
             <option value="12:30am">12:30am</option>
             <option value="1:00am">1:00am</option>
@@ -190,5 +196,6 @@
 
 </body>
 <script src="/script.js"></script>
+
 
 </html>

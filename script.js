@@ -32,39 +32,54 @@ document.getElementById("time").setAttribute("value", nt);
       }
     }
 
-    function newEvent() {
-      console.log(document.getElementById("start-date").value);
-      console.log(document.getElementById("start-time").value);
-      console.log(document.getElementById("end-date").value);
-      console.log(document.getElementById("end-time").value);
-      console.log(document.getElementById("name").value);
-      alert("The form was submitted");
+    var r1320 = 0;
+    var r1322 = 1;
+    var r1324 = 0;
+    var r1326 = 1;
+    var r1328 = 0;
+    var r2320 = 0;
+    var r2322 = 0;
+    var r2324 = 1;
+    var r2326 = 1;
+    var r2328 = 1;
+
+    if(r1320){
+      var img = document.getElementById("1320");
+      img.src = "/FloorPlans/1320r.png";
     }
-
-
-    // Display red image when room is booked
-var x = 2324; // Replace with your own variable value
-
-if (x == 2320) {
-    var img = document.getElementById("2320");
-    img.src = "/FloorPlans/2320r.png";
-    //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
-} else if (x == 2322) {
-    var img = document.getElementById("2322");
-    img.src = "/FloorPlans/2322r.png";
-    //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed 
-} else if (x == 2324) {
-    var img = document.getElementById("2324");
-    img.src = "/FloorPlans/2324r.png";
-    //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
-} else if (x == 2326) {
-    var img = document.getElementById("2326");
-    img.src = "/FloorPlans/2326r.png";
-    //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
-} else if (x == 2328) {
-    var img = document.getElementById("2328");
-    img.src = "/FloorPlans/2328r.png";
-    //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
-} else {
-    document.write('Invalid value for x.');
-}
+    if(r1322){
+      var img = document.getElementById("1322");
+      img.src = "/FloorPlans/1322r.png";
+    }
+    if(r1324){
+      var img = document.getElementById("1324");
+      img.src = "/FloorPlans/1324r.png";
+    }
+    if(r1326){
+      var img = document.getElementById("1326");
+      img.src = "/FloorPlans/1326r.png";
+    }
+    if(r1328){
+      var img = document.getElementById("1328");
+      img.src = "/FloorPlans/1328r.png";
+    }
+    if(r2320){
+      var img = document.getElementById("2320");
+      img.src = "/FloorPlans/2320r.png";
+    }
+    if(r2322){
+      var img = document.getElementById("2322");
+      img.src = "/FloorPlans/2322r.png";
+    }
+    if(r2324){
+      var img = document.getElementById("2324");
+      img.src = "/FloorPlans/2324r.png";
+    }
+    if(r2326){
+      var img = document.getElementById("2326");
+      img.src = "/FloorPlans/2326r.png";
+    }
+    if(r2328){
+      var img = document.getElementById("2328");
+      img.src = "/FloorPlans/2328r.png";
+    }

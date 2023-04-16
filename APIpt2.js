@@ -1,79 +1,28 @@
-// Require google from googleapis package.
-const { google } = require('googleapis')
 
-// Require oAuth2 from our google instance.
-const { OAuth2 } = google.auth
+const bodyParser = require('body-parser');
 
-// Create a new instance of oAuth and set our Client ID & Client Secret.
-const oAuth2Client = new OAuth2(
-  '147087934507-l74sss2dmn1j15msljrcogm467r00sfi.apps.googleusercontent.com',
-  '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'
-)
 
-// Call the setCredentials method on our oAuth2Client instance and set our refresh token.
-oAuth2Client.setCredentials({
-  refresh_token: '1//04TVLIDLo5TO3CgYIARAAGAQSNwF-L9Iruh_RAG4l0C_eUqTkqiiEjDAiZx2v2RIYBZwJ6ZS6E9Oh7XgXsoD3Ryykym14hjZnveE',
-})
+// Parse URL-encoded form data
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Create a new calender instance.
-const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
+// Handle form submission
+app.post('/submit', (req, res) => {
+  // Access form data from request body
+  var start_date = req.body.start-date;
+  var start_time = req.body.start-time;
+  var end_date = req.body.end-date;
+  var end_time = req.body.end-time;
+  var name = name;
 
-// Create a new event start date instance for temp uses in our calendar.
-const eventStartTime = new Date()
-eventStartTime.setDate(eventStartTime.getDay()) //start day
 
-// Create a new event end date instance for temp uses in our calendar.
-const eventEndTime = new Date()
-eventEndTime.setDate(eventEndTime.getDay()) //end day
-eventEndTime.setMinutes(eventEndTime.getMinutes()) //this is the duration of the meeting
+  // Process the form data as needed
+  // ...
 
-// Create a dummy event for temp uses in our calendar
-const event = {
-  summary: `Meeting with Mr. Jansen`,
-  location: `Room LEEP2 1320`,
-  description: `Gotta do some stuffs.`,
-  colorId: 1,
-  start: {
-    dateTime: eventStartTime,
-    timeZone: 'America/Denver',
-  },
-  end: {
-    dateTime: eventEndTime,
-    timeZone: 'America/Denver',
-  },
-}
+  // Send response
+  res.send('Form submission successful');
+});
 
-// Check if we a busy and have an event on our calendar for the same time.
-calendar.freebusy.query(
-  {
-    resource: {
-      timeMin: eventStartTime,
-      timeMax: eventEndTime,
-      timeZone: 'America/Denver',
-      items: [{ id: 'primary' }],
-    },
-  },
-  (err, res) => {
-    // Check for errors in our query and log them if they exist.
-    if (err) return console.error('Free Busy Query Error: ', err)
-
-    // Create an array of all events on our calendar during that time.
-    const eventArr = res.data.calendars.primary.busy
-
-    // Check if event array is empty which means we are not busy
-    if (eventArr.length === 0)
-      // If we are not busy create a new calendar event.
-      return calendar.events.insert(
-        { calendarId: 'primary', resource: event },
-        err => {
-          // Check for errors and log them if they exist.
-          if (err) return console.error('Error Reserving Room:', err)
-          // Else log that the event was created.
-          return console.log('Calendar event successfully created.')
-        }
-      )
- 
-    // If event array is not empty log that we are busy.
-    return console.log(`Sorry this room is busy...`)
- }
-)
+// Start server
+app.listen(3000, () => {
+  console.log('Server started on http://localhost:3000');
+});
