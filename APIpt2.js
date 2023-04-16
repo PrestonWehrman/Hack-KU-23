@@ -20,18 +20,18 @@ const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
 
 // Create a new event start date instance for temp uses in our calendar.
 const eventStartTime = new Date()
-eventStartTime.setDate(eventStartTime.getDay() + 1)
+eventStartTime.setDate(eventStartTime.getDay() + 2)
 
 // Create a new event end date instance for temp uses in our calendar.
 const eventEndTime = new Date()
-eventEndTime.setDate(eventEndTime.getDay() + 7)
+eventEndTime.setDate(eventEndTime.getDay() + 4)
 eventEndTime.setMinutes(eventEndTime.getMinutes() + 45)
 
 // Create a dummy event for temp uses in our calendar
 const event = {
-  summary: `Meeting with Mr. Jansen`,
-  location: `Room LEEP2 1320`,
-  description: `Gotta do some stuffs.`,
+  summary: `Meeting with David`,
+  location: `3595 California St, San Francisco, CA 94118`,
+  description: `Meet with David to talk about the new client project and how to integrate the calendar for booking.`,
   colorId: 1,
   start: {
     dateTime: eventStartTime,
@@ -64,16 +64,16 @@ calendar.freebusy.query(
     if (eventArr.length === 0)
       // If we are not busy create a new calendar event.
       return calendar.events.insert(
-        { calendarId: 'LEEP2 1320', resource: event },
+        { calendarId: 'primary', resource: event },
         err => {
           // Check for errors and log them if they exist.
-          if (err) return console.error('Error Reserving Room:', err)
+          if (err) return console.error('Error Creating Calender Event:', err)
           // Else log that the event was created.
           return console.log('Calendar event successfully created.')
         }
       )
- 
+
     // If event array is not empty log that we are busy.
-    return console.log(`Sorry this room is busy...`)
- }
+    return console.log(`Sorry I'm busy...`)
+  }
 )
