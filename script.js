@@ -1,8 +1,10 @@
 var now = new Date();
 now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
 var nt = now.toISOString().slice(0, 16);
-//console.log(nt);
+console.log(nt);
 document.getElementById("time").setAttribute("value", nt);
+document.getElementById("start-date").setAttribute("value", nt.slice(0, 10));
+document.getElementById("end-date").setAttribute("value", nt.slice(0, 10));
 
     // Get the modal
     var modal = document.getElementById("myModal");
