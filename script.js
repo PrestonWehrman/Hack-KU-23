@@ -1,7 +1,7 @@
 var now = new Date();
 now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
 var nt = now.toISOString().slice(0, 16);
-console.log(nt);
+//console.log(nt);
 document.getElementById("time").setAttribute("value", nt);
 
     // Get the modal
@@ -31,6 +31,16 @@ document.getElementById("time").setAttribute("value", nt);
         modal.style.display = "none";
       }
     }
+
+    function newEvent() {
+      console.log(document.getElementById("start-date").value);
+      console.log(document.getElementById("start-time").value);
+      console.log(document.getElementById("end-date").value);
+      console.log(document.getElementById("end-time").value);
+      console.log(document.getElementById("name").value);
+      alert("The form was submitted");
+    }
+
 
     // Display red image when room is booked
 var x = 2324; // Replace with your own variable value
