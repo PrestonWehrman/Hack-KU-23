@@ -51,23 +51,23 @@ var x = 2324; // Replace with your own variable value
 
 if (x == 2320) {
     var img = document.getElementById("2320");
-    img.src = "/Floor Plan 2 Images/2320 closed.png";
+    img.src = "/FloorPlans/2320r.png";
     //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
 } else if (x == 2322) {
     var img = document.getElementById("2322");
-    img.src = "/Floor Plan 2 Images/2322 closed.png";
+    img.src = "/FloorPlans/2322r.png";
     //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed 
 } else if (x == 2324) {
     var img = document.getElementById("2324");
-    img.src = "/Floor Plan 2 Images/2324 closed.png";
+    img.src = "/FloorPlans/2324r.png";
     //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
 } else if (x == 2326) {
     var img = document.getElementById("2326");
-    img.src = "/Floor Plan 2 Images/2326 closed.png";
+    img.src = "/FloorPlans/2326r.png";
     //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
 } else if (x == 2328) {
     var img = document.getElementById("2328");
-    img.src = "/Floor Plan 2 Images/2328 closed.png";
+    img.src = "/FloorPlans/2328r.png";
     //img.style.filter = "hue-rotate(180deg)"; // Change hue rotation angle as needed
 } else {
     document.write('Invalid value for x.');
