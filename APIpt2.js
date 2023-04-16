@@ -20,12 +20,12 @@ const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
 
 // Create a new event start date instance for temp uses in our calendar.
 const eventStartTime = new Date()
-eventStartTime.setDate(eventStartTime.getDay()) //start day
+eventStartTime.setDate(eventStartTime.getDay() + 1)
 
 // Create a new event end date instance for temp uses in our calendar.
 const eventEndTime = new Date()
-eventEndTime.setDate(eventEndTime.getDay()) //end day
-eventEndTime.setMinutes(eventEndTime.getMinutes()) //this is the duration of the meeting
+eventEndTime.setDate(eventEndTime.getDay() + 7)
+eventEndTime.setMinutes(eventEndTime.getMinutes() + 45)
 
 // Create a dummy event for temp uses in our calendar
 const event = {
@@ -64,7 +64,7 @@ calendar.freebusy.query(
     if (eventArr.length === 0)
       // If we are not busy create a new calendar event.
       return calendar.events.insert(
-        { calendarId: 'primary', resource: event },
+        { calendarId: 'LEEP2 1320', resource: event },
         err => {
           // Check for errors and log them if they exist.
           if (err) return console.error('Error Reserving Room:', err)
