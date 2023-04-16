@@ -25,7 +25,7 @@ eventStartTime.setDate(eventStartTime.getDay()+ 2) //start day
 // Create a new event end date instance for temp uses in our calendar.
 const eventEndTime = new Date()
 eventEndTime.setDate(eventEndTime.getDay()+ 1) //end day
-eventEndTime.setMinutes(eventEndTime.getMinutes()+ 1) //this is the duration of the meeting
+eventEndTime.setMinutes(eventEndTime.getMinutes()+ 45) //this is the duration of the meeting
 
 // Create a dummy event for temp uses in our calendar
 const event = {
