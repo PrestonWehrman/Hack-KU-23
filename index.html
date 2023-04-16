@@ -51,9 +51,10 @@
       <span class="close">&times; Close</span>
       <div class="modal-content">
         <p class="modal-p-title" id="modal-p-title">LEEP2 <span id="room-num">###</span></p>
-        <div class="reservation-form">
-          <label for="rtime">Start Time</label>
-          <select name="rtime" id="rtime">
+        <form methof="post">
+          <label for="etime">Start Time</label>
+          <input type="date" value="" />
+          <select name="dtime" id="etime">
             <option value="12:00am">12:00am</option>
             <option value="12:30am">12:30am</option>
             <option value="1:00am">1:00am</option>
@@ -103,8 +104,9 @@
             <option value="11:00pm">11:00pm</option>
             <option value="11:30pm">11:30pm</option>
           </select>
-          <label for="rtime">End Time</label>
-          <select name="rtime" id="rtime">
+          <label for="dtime">End Time</label>
+          <input type="date" value="" />
+          <select name="dtime" id="dtime">
             <option value="12:00am">12:00am</option>
             <option value="12:30am">12:30am</option>
             <option value="1:00am">1:00am</option>
@@ -154,7 +156,7 @@
             <option value="11:00pm">11:00pm</option>
             <option value="11:30pm">11:30pm</option>
           </select>
-        </div>
+        </form>
       </div>
     </div>
   </div>
