@@ -4,19 +4,19 @@
     "description": "Simple example on Google Calendar API using oAuth in NodeJS.",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/CamSkiTheDev/Google-Calendar-NodeJS-App.git"
+        "type": "git",
+        "url": "git+https://github.com/CamSkiTheDev/Google-Calendar-NodeJS-App.git"
     },
     "author": "Cameron Lucas",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/CamSkiTheDev/Google-Calendar-NodeJS-App/issues"
+        "url": "https://github.com/CamSkiTheDev/Google-Calendar-NodeJS-App/issues"
     },
     "homepage": "https://github.com/CamSkiTheDev/Google-Calendar-NodeJS-App#readme",
     "dependencies": {
-      "googleapis": "^47.0.0"
+        "googleapis": "^118.0.0"
     }
-  }
+}

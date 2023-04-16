@@ -20,18 +20,18 @@ const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
 
 // Create a new event start date instance for temp uses in our calendar.
 const eventStartTime = new Date()
-eventStartTime.setDate(eventStartTime.getDay() + 2)
+eventStartTime.setDate(eventStartTime.getDay() + 3)
 
 // Create a new event end date instance for temp uses in our calendar.
 const eventEndTime = new Date()
-eventEndTime.setDate(eventEndTime.getDay() + 4)
-eventEndTime.setMinutes(eventEndTime.getMinutes() + 45)
+eventEndTime.setDate(eventEndTime.getDay() + )
+eventEndTime.setMinutes(eventEndTime.getMinutes() + 50)
 
 // Create a dummy event for temp uses in our calendar
 const event = {
-  summary: `Meeting with David`,
-  location: `3595 California St, San Francisco, CA 94118`,
-  description: `Meet with David to talk about the new client project and how to integrate the calendar for booking.`,
+  summary: `Meeting with Mr. Gustavo`,
+  location: `Room LEEP2 1320`,
+  description: `Gotta do some stuffs.`,
   colorId: 1,
   start: {
     dateTime: eventStartTime,
