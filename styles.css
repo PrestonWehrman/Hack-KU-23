@@ -39,7 +39,7 @@ h2 {
   padding: 5px;
 }
 
-/*calendar styles*/
+/*calendar styles
 input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent;
   bottom: 0;
@@ -51,7 +51,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 0;
   top: 0;
   width: auto;
-}
+}*/
 
 .calendar {
   position: relative;
@@ -118,4 +118,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #aaa;
   text-decoration: underline;
   cursor: pointer;
-}
+} 
