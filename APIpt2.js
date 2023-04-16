@@ -6,13 +6,13 @@ const { OAuth2 } = google.auth
 
 // Create a new instance of oAuth and set our Client ID & Client Secret.
 const oAuth2Client = new OAuth2(
-  'YOUR CLIENT ID GOES HERE',
-  'YOUR CLIENT SECRET GOES HERE'
+  '147087934507-l74sss2dmn1j15msljrcogm467r00sfi.apps.googleusercontent.com',
+  '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'
 )
 
 // Call the setCredentials method on our oAuth2Client instance and set our refresh token.
 oAuth2Client.setCredentials({
-  refresh_token: 'YOUR REFRESH TOKEN GOES HERE',
+  refresh_token: '1//04TVLIDLo5TO3CgYIARAAGAQSNwF-L9Iruh_RAG4l0C_eUqTkqiiEjDAiZx2v2RIYBZwJ6ZS6E9Oh7XgXsoD3Ryykym14hjZnveE',
 })
 
 // Create a new calender instance.
@@ -67,13 +67,13 @@ calendar.freebusy.query(
         { calendarId: 'primary', resource: event },
         err => {
           // Check for errors and log them if they exist.
-          if (err) return console.error('Error Creating Calender Event:', err)
+          if (err) return console.error('Error Reserving Room:', err)
           // Else log that the event was created.
           return console.log('Calendar event successfully created.')
         }
       )
 
     // If event array is not empty log that we are busy.
-    return console.log(`Sorry I'm busy...`)
+    return console.log(`Sorry this room is busy...`)
   }
 )
