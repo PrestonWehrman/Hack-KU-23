@@ -27,6 +27,7 @@ document
     // When the user clicks on the button, open the modal
     var modal_p_title = document.getElementById("room-num");
     for (i = 0; i < btn.length; i++) {
+      
       (function (index) {
         btn[index].onclick = function () {
           modal.style.display = "block";
