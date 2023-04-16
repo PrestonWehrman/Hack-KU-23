@@ -20,12 +20,12 @@ const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
 
 // Create a new event start date instance for temp uses in our calendar.
 const eventStartTime = new Date()
-eventStartTime.setDate(eventStartTime.getDay()+ 2) //start day
+eventStartTime.setDate(eventStartTime.getDay()) //start day
 
 // Create a new event end date instance for temp uses in our calendar.
 const eventEndTime = new Date()
-eventEndTime.setDate(eventEndTime.getDay()+ 1) //end day
-eventEndTime.setMinutes(eventEndTime.getMinutes()+ 45) //this is the duration of the meeting
+eventEndTime.setDate(eventEndTime.getDay()) //end day
+eventEndTime.setMinutes(eventEndTime.getMinutes()) //this is the duration of the meeting
 
 // Create a dummy event for temp uses in our calendar
 const event = {
